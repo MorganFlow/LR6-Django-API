@@ -23,7 +23,9 @@ docker compose exec web python manage.py createsuperuser
 
 ### 6. Готово!
 API-документация: http://localhost:8000/swagger/
+
 Админка: http://localhost:8000/admin/
+
 Получение токена: POST → http://localhost:8000/api/token/
 
 ### Использование Swagger
@@ -39,17 +41,17 @@ API-документация: http://localhost:8000/swagger/
 
 ### Полезные команды
 
-^Остановить всё (данные сохранятся)
+Остановить всё (данные сохранятся)
 
-docker compose down
+> docker compose down
 
-^Перезапустить
+Перезапустить
 
-docker compose restart
+> docker compose restart
 
-^Посмотреть логи
+Посмотреть логи
 
-docker compose logs -f web
+> docker compose logs -f web
 
 ### Эндпоинты API
 

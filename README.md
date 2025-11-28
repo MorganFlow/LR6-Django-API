@@ -54,9 +54,9 @@ docker compose logs -f web
 
 ### Эндпоинты API
 
-/api/users/ — пользователи
-/api/profiles/ — профили
-/api/matches/ — совпадения
-/api/messages/ — сообщения
-/api/token/ — получение JWT
-/api/token/refresh/ — обновление токена
+> /api/users/ — пользователи
+> /api/profiles/ — профили
+> /api/matches/ — совпадения
+> /api/messages/ — сообщения
+> /api/token/ — получение JWT
+> /api/token/refresh/ — обновление токена

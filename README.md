@@ -2,20 +2,11 @@
 
 Полностью рабочий RESTful API для сайта знакомств с JWT-аутентификацией, пагинацией, документацией Swagger и PostgreSQL в Docker.
 
-## Выполненные требования ЛР
-- 4 связанные таблицы (`User`, `Profile`, `Match`, `Message`)
-- Кастомная модель пользователя (`myapp.User`)
-- Полный CRUD через Django REST Framework
-- Обязательная аутентификация по JWT-токенам
-- Пагинация на всех списковых эндпоинтах
-- Swagger-документация с кнопкой **Authorize**
-- Запуск через Docker (Django + PostgreSQL)
-- Данные сохраняются в volume — не теряются при перезапуске
-
 ## Как запустить
 
 ### 1. Клонировать проект
 git clone https://github.com/ваш-username/LR6-Django-API.git
+
 cd LR6-Django-API/myproject
 
 ### 2. Создать и заполнить .env
@@ -37,26 +28,39 @@ API-документация: http://localhost:8000/swagger/
 
 ### Использование Swagger
 Открой http://localhost:8000/swagger/
+
 Нажми Authorize
+
 Вставь: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxxxxxxx
+
 (токен из поля access при POST /api/token/)
+
 Теперь все запросы авторизованы!
 
 ### Полезные команды
+
 ^Остановить всё (данные сохранятся)
+
 docker compose down
 
 ^Перезапустить
+
 docker compose restart
 
 ^Посмотреть логи
+
 docker compose logs -f web
 
 ### Эндпоинты API
 
-> /api/users/ — пользователи
-> /api/profiles/ — профили
-> /api/matches/ — совпадения
-> /api/messages/ — сообщения
-> /api/token/ — получение JWT
-> /api/token/refresh/ — обновление токена
+/api/users/ — пользователи
+
+/api/profiles/ — профили
+
+/api/matches/ — совпадения
+
+/api/messages/ — сообщения
+
+/api/token/ — получение JWT
+
+/api/token/refresh/ — обновление токена
